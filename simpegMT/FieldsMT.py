@@ -52,7 +52,7 @@ class FieldsMT_1D(FieldsMT):
         return None
 
     def _bPrimary(self, eSolution, srcList):
-        bPrimary = np.zeros([self.survey.mesh.nE,eSolution.shape[1]], dtype = complex)
+        bPrimary = np.zeros([self.mesh.nE,eSolution.shape[1]], dtype = complex)
         for i, src in enumerate(srcList):
             bp = src.bPrimary(self.survey.prob)
             if bp is not None:
@@ -205,7 +205,7 @@ class FieldsMT_3D(FieldsMT):
         return None
 
     def _b_pxPrimary(self, e_pxSolution, srcList):
-        b_pxPrimary = np.zeros([self.survey.mesh.nF,e_pxSolution.shape[1]], dtype = complex)
+        b_pxPrimary = np.zeros([self.mesh.nF,e_pxSolution.shape[1]], dtype = complex)
         for i, src in enumerate(srcList):
             bp = src.bPrimary(self.survey.prob)
             if bp is not None:
@@ -213,7 +213,7 @@ class FieldsMT_3D(FieldsMT):
         return b_pxPrimary
 
     def _b_pyPrimary(self, e_pySolution, srcList):
-        b_pyPrimary = np.zeros([self.survey.mesh.nF,e_pySolution.shape[1]], dtype = complex)
+        b_pyPrimary = np.zeros([self.mesh.nF,e_pySolution.shape[1]], dtype = complex)
         for i, src in enumerate(srcList):
             bp = src.bPrimary(self.survey.prob)
             if bp is not None:
