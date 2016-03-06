@@ -1,3 +1,10 @@
+MT development has been moved to SimPEG
+=======================================
+
+http://github.com/simpeg/simpeg
+
+The most recent work will be on the `mt/dev` branch
+
 simpegmt
 ========
 
